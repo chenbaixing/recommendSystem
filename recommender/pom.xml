@@ -13,6 +13,10 @@
     <packaging>pom</packaging>
     <modules>
         <module>DataLoder</module>
+        <module>StatisticsRecommender</module>
+        <module>OfflineRecommender</module>
+        <module>ItemCFRecommender</module>
+        <module>ContentRecommender</module>
     </modules>
 
     <dependencyManagement>
