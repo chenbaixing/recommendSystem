@@ -39,10 +39,10 @@ case class MongoConfig( uri: String, db: String )
 
 object DataLoder {
     // 定义数据文件路径
-   // val PRODUCT_DATA_PATH = "/home/soft/file/products.csv"
-   // val RATING_DATA_PATH = "/home/soft/file/ratings.csv"
-    val PRODUCT_DATA_PATH = "C:\\work\\recommendworkspace\\recommendSystem\\recommender\\DataLoder\\src\\main\\resources\\products.csv"
-    val RATING_DATA_PATH = "C:\\work\\recommendworkspace\\recommendSystem\\recommender\\DataLoder\\src\\main\\resources\\ratings.csv"
+    val PRODUCT_DATA_PATH = "/home/soft/file/products.csv"
+    val RATING_DATA_PATH = "/home/soft/file/ratings.csv"
+  //  val PRODUCT_DATA_PATH = "C:\\work\\recommendworkspace\\recommendSystem\\recommender\\DataLoder\\src\\main\\resources\\products.csv"
+   // val RATING_DATA_PATH = "C:\\work\\recommendworkspace\\recommendSystem\\recommender\\DataLoder\\src\\main\\resources\\ratings.csv"
     // 定义mongodb中存储的表名
     val MONGODB_PRODUCT_COLLECTION = "Product"
     val MONGODB_RATING_COLLECTION = "Rating"
@@ -53,7 +53,7 @@ object DataLoder {
             "mongo.uri" -> "mongodb://10.177.199.64:27017/recommender",
             "mongo.db" -> "recommender"
         )
-        // 创建一个spark config
+        // 创建一个sparkconfig
         val sparkConf = new SparkConf().setMaster(config("spark.cores")).setAppName("DataLoader")
         // 创建spark session
         val spark = SparkSession.builder().config(sparkConf).getOrCreate()
